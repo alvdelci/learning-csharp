@@ -8,6 +8,7 @@ namespace HelloWorld
         {
             Console.WriteLine("Nosso Programa em C#");
             Personagem player1 = new Personagem("Joaquim", 40.5, 150);
+            Orc player2 = new Personagem("João", 60.4, 170, 100);
 
             Console.WriteLine(player1.Nome);
             player1.Nome = "João";
