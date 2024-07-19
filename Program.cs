@@ -1,68 +1,31 @@
 ﻿using System;
+using character;
 
-namespace HelloWorld
+namespace Main
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Nosso Programa em C#");
-            Personagem player1 = new Personagem("Joaquim", 40.5, 150);
-            Orc player2 = new Personagem("João", 60.4, 170, 100);
+            Console.WriteLine("RPG em C#\n");
+            Orc player1 = new Orc("Legolas");
 
-            Console.WriteLine(player1.Nome);
-            player1.Nome = "João";
-            Console.WriteLine(player1.Nome);
+            Console.WriteLine(player1.Name);
+            Console.WriteLine(player1.Hp);
+
+            player1.Name += " Folha Verde";
+            player1.Hp = 1000;
+            player1.Mana = 100;
+
+            Console.WriteLine("\nPersonagem Criado");
+            Console.WriteLine(player1.Name);
+            Console.WriteLine(player1.Hp);
+            Console.WriteLine(player1.Mana);
         }
     }
 }
 
-class Personagem
-{
-    private string nome;
-    private double peso;
-    private int altura;
-
-    public Personagem(string nome, double peso, int altura)
-    {
-        this.nome = nome;
-        this.peso = peso;
-        this.altura = altura;
-    }
-
-    //Getters e Setters
-    public string Nome
-    {
-        get { return nome; }
-        set { nome = value; }
-    }
-
-    public double Peso
-    {
-        get { return peso; }
-        set { peso = value; }
-    }
-
-    public int Altura
-    {
-        get { return altura; }
-        set { altura = value; }
-    }
-}
-
-class Orc : Personagem
-{
-    private int vigor;
-    public Orc(string nome, double peso, int altura, int vigor) : base(nome, peso, altura)
-    {
-        this.vigor = vigor;
-    }
 
 
-    //Getters e Setters
-    public int Vigor
-    {
-        get { return vigor; }
-        set { vigor = value; }
-    }
-}
+
+
